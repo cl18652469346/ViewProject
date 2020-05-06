@@ -8,12 +8,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements AppView.AppIconListener, View.OnClickListener ,MultiChoiceView.FingerSelectListener{
+import com.android.viewProject.CustomView.MyTopBar;
+
+public class MainActivity extends AppCompatActivity implements AppView.AppIconListener,
+        View.OnClickListener,
+        MultiChoiceView.FingerSelectListener,
+        MyTopBar.MyTopBarClickListener {
 
     private AppView appView;
     private MultiChoiceView multiChoiceView;
     private AppView appViews[];
     private Button changeModeButton;
+    private MyTopBar myTopBar;
     private static final String TAG = "MainActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +33,8 @@ public class MainActivity extends AppCompatActivity implements AppView.AppIconLi
 
         multiChoiceView = findViewById(R.id.multiChoiceView);
         multiChoiceView.setFingerSelectListener(this);
+        myTopBar = (MyTopBar) findViewById(R.id.mytopbar);
+        myTopBar.setTopBarOnClickListener(this);
     }
 
     @Override
@@ -57,5 +65,15 @@ public class MainActivity extends AppCompatActivity implements AppView.AppIconLi
 //        onAppIconClick(fingerIndex);
         Log.i(TAG," onFingerSelect fingerIndex = " + fingerIndex);
         Toast.makeText(this,"index = " + fingerIndex, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void leftClick() {
+        Toast.makeText(MainActivity.this, "左边被点击了", Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void rightClick() {
+        Toast.makeText(MainActivity.this, "右边被点击了", Toast.LENGTH_LONG).show();
     }
 }

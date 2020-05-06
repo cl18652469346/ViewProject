@@ -223,4 +223,17 @@ public class MultiChoiceView extends RelativeLayout implements AppView.AppIconLi
         }
         return super.onTouchEvent(event);
     }
+
+
+    @Override
+    protected void onFinishInflate() {
+        super.onFinishInflate();
+        Log.i(TAG,"MultiChoiceView onFinishInflate");
+    }
+
+    @Override
+    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+        super.onSizeChanged(w, h, oldw, oldh);
+        Log.i(TAG,"MultiChoiceView onSizeChanged");
+    }
 }
