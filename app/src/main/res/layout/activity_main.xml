@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:gravity="center">
+
+    <com.android.viewProject.AppView
+        android:id="@+id/appView"
+        android:layout_width="90px"
+        android:layout_height="90px"
+        app:iconSize="80"
+        android:visibility="gone">
+    </com.android.viewProject.AppView>
+
+    <com.android.viewProject.MultiChoiceView
+        android:id="@+id/multiChoiceView"
+        android:layout_width="600px"
+        android:layout_height="600px"
+        app:iconSize_="80"
+        app:viewArea_="600"
+        app:imagePoints="@array/imagePoints"
+        android:visibility="visible">
+        <com.android.viewProject.AppView
+            android:id="@+id/appView_1"
+            android:layout_width="90px"
+            android:layout_height="90px"
+            app:iconSize="80" />
+        <com.android.viewProject.AppView
+            android:id="@+id/appView_2"
+            android:layout_width="90px"
+            android:layout_height="90px"
+            app:iconSize="80" />
+        <com.android.viewProject.AppView
+            android:id="@+id/appView_3"
+            android:layout_width="90px"
+            android:layout_height="90px"
+            app:iconSize="80" />
+        <com.android.viewProject.AppView
+            android:id="@+id/appView_4"
+            android:layout_width="90px"
+            android:layout_height="90px"
+            app:iconSize="80" />
+    </com.android.viewProject.MultiChoiceView>
+    <Button
+        android:id="@+id/changeMod"
+        android:text="Change Mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+</LinearLayout>

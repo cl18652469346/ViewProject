@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AppView">
+        <attr name="iconSize" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="MultiChoiceView">
+        <attr name="iconSize_" format="integer"/>
+        <attr name="viewArea_" format="integer"/>
+        <attr name="imagePoints" format="reference"/>
+    </declare-styleable>
+
+    <string-array name="imagePoints">
+        <item>100,100;200,100;200,200;100,200</item>
+        <item>0,0;0,0;0,0;0,0</item>
+        <item>0,0;0,0;0,0;0,0</item>
+        <item>0,0;0,0;0,0;0,0</item>
+    </string-array>
+</resources>
