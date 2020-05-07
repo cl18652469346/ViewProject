@@ -8,78 +8,97 @@
     tools:context=".MainActivity"
     android:gravity="center">
 
-    <com.android.viewProject.AppView
-        android:id="@+id/appView"
-        android:layout_width="90px"
-        android:layout_height="90px"
-        app:iconSize="80"
-        android:visibility="gone">
-    </com.android.viewProject.AppView>
-
-    <com.android.viewProject.MultiChoiceView
-        android:id="@+id/multiChoiceView"
-        android:layout_width="600px"
-        android:layout_height="600px"
-        app:iconSize_="80"
-        app:viewArea_="600"
-        app:imagePoints="@array/imagePoints"
-        android:visibility="visible">
-        <com.android.viewProject.AppView
-            android:id="@+id/appView_1"
-            android:layout_width="90px"
-            android:layout_height="90px"
-            app:iconSize="80" />
-        <com.android.viewProject.AppView
-            android:id="@+id/appView_2"
-            android:layout_width="90px"
-            android:layout_height="90px"
-            app:iconSize="80" />
-        <com.android.viewProject.AppView
-            android:id="@+id/appView_3"
-            android:layout_width="90px"
-            android:layout_height="90px"
-            app:iconSize="80" />
-        <com.android.viewProject.AppView
-            android:id="@+id/appView_4"
-            android:layout_width="90px"
-            android:layout_height="90px"
-            app:iconSize="80" />
-    </com.android.viewProject.MultiChoiceView>
-
-    <Button
-        android:id="@+id/changeMod"
-        android:text="Change Mode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
-
-    <com.android.viewProject.CustomView.CustomTextView
-        android:text="custom textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <com.android.viewProject.CustomView.LinearGradient_MatrixTextView
-        android:text="LinearGradient_MatrixTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <com.android.viewProject.CustomView.MyTopBar
-        android:id="@+id/mytopbar"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:background="#3F51B5"
-        app:leftBackground="#ffffff"
-        app:leftText="Back"
-        app:leftTextColor="#000000"
-        app:rightBackground="#ffffff"
-        app:rightText="+"
-        app:rightTextColor="#000000"
-        app:titleColor="#ffffff"
-        app:titleText="Title"
-        app:titleTextSize="8sp"/>
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <com.android.viewProject.AppView
+                android:id="@+id/appView"
+                android:layout_width="90px"
+                android:layout_height="90px"
+                app:iconSize="80"
+                android:visibility="gone">
+            </com.android.viewProject.AppView>
+
+            <com.android.viewProject.MultiChoiceView
+                android:id="@+id/multiChoiceView"
+                android:layout_width="600px"
+                android:layout_height="600px"
+                app:iconSize_="80"
+                app:viewArea_="600"
+                app:imagePoints="@array/imagePoints"
+                android:visibility="visible">
+                <com.android.viewProject.AppView
+                    android:id="@+id/appView_1"
+                    android:layout_width="90px"
+                    android:layout_height="90px"
+                    app:iconSize="80" />
+                <com.android.viewProject.AppView
+                    android:id="@+id/appView_2"
+                    android:layout_width="90px"
+                    android:layout_height="90px"
+                    app:iconSize="80" />
+                <com.android.viewProject.AppView
+                    android:id="@+id/appView_3"
+                    android:layout_width="90px"
+                    android:layout_height="90px"
+                    app:iconSize="80" />
+                <com.android.viewProject.AppView
+                    android:id="@+id/appView_4"
+                    android:layout_width="90px"
+                    android:layout_height="90px"
+                    app:iconSize="80" />
+            </com.android.viewProject.MultiChoiceView>
+
+            <Button
+                android:id="@+id/changeMod"
+                android:text="Change Mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <com.android.viewProject.CustomView.CustomTextView
+                android:text="custom textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.android.viewProject.CustomView.LinearGradient_MatrixTextView
+                android:text="LinearGradient_MatrixTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.android.viewProject.CustomView.MyTopBar
+                android:id="@+id/mytopbar"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="#3F51B5"
+                app:leftBackground="#ffffff"
+                app:leftText="Back"
+                app:leftTextColor="#000000"
+                app:rightBackground="#ffffff"
+                app:rightText="+"
+                app:rightTextColor="#000000"
+                app:titleColor="#ffffff"
+                app:titleText="Title"
+                app:titleTextSize="8sp"/>
 
 
-    <com.android.viewProject.CustomView.MyView
-        android:layout_width="500px"
-        android:layout_height="500px"/>
+            <com.android.viewProject.CustomView.MyView
+                android:layout_width="500px"
+                android:layout_height="500px"/>
+
+
+            <!-- 注意添加自定义View组件的标签名：包名 + 自定义View类名-->
+            <!--  控件背景设置为黑色-->
+            <com.android.viewProject.CustomView.CircleView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#dd6666"
+                android:padding="5dp"/>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
